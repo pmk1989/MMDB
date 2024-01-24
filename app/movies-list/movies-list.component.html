@@ -1,0 +1,12 @@
+<div *ngIf="isLoading">Loading....</div>
+<div *ngIf="notFound">
+    <h3 class="no-data-found">No data available,Please search again.</h3>
+</div>
+<div style="display: grid;grid-template-columns: 1fr 1fr 1fr 1fr;row-gap: 15px;">
+    <div *ngFor="let movie of searchResults" [routerLink]="['movie-details', movie.id]">
+        <div class="card clearfix" [id]="movie.id">
+            <img [src]="movieService.getImageUrl(movie.poster_path)" alt="{{movie.title}}">
+            <h6>{{movie.title}}</h6>
+        </div>
+    </div>
+</div>

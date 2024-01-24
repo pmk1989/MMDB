@@ -1,0 +1,15 @@
+:host {
+    
+    background-color: skyblue;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    .search-box {
+        width: 400px;
+        input {
+            font-family: 'Roboto';
+            font-size: 24px;
+            margin: 5px 0;
+        }
+    }
+}

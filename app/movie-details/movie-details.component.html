@@ -1,0 +1,37 @@
+
+<!-- 
+
+<div *ngIf="movie">
+    <div class="movie-poster">
+      <img [src]="movieService.getImageUrl(movie.poster_path)" alt="{{ movie.title }}">
+    </div>
+    <div class="movie-details">
+      <h1>{{ movie.title }}</h1>
+      <p class="release-date">Release Date: {{ movie.release_date }}</p>
+      <p class="overview">{{ movie.overview }}</p>
+      
+    </div>
+  </div> -->
+
+  <!-- movie-detail.component.html -->
+<!-- movie-detail.component.html -->
+<div *ngIf="movie" class="movie-details">
+    <div class="movie-poster">
+      <img [src]="movieService.getImageUrl(movie.poster_path)" alt="{{ movie.title }}">
+    </div>
+    <div class="movie-info">
+      <h1>{{ movie.title }}</h1>
+      <p *ngIf="movie.release_date" class="release-date">Release Date: {{ movie.release_date }}</p>
+      <p *ngIf="movie.status" class="release-status">Status: {{ movie.status }}</p>
+      <p *ngIf="movie.runtime" class="runtime">Runtime: {{ movie.runtime }} minutes</p>
+      <p *ngIf="movie.vote_average" class="rating">Rating: {{ movie.vote_average }}/10</p>
+      <p *ngIf="movie.overview" class="overview">{{ movie.overview }}</p>
+      <p *ngIf="movie.original_language" class="language">Language: {{ movie.original_language }}</p>
+      <p *ngIf="movie.budget" class="budget">Budget: ${{ movie.budget | number }}</p>
+      <p *ngIf="movie.revenue" class="revenue">Revenue: ${{ movie.revenue | number }}</p>
+    
+    </div>
+  </div>
+  
+  
+  

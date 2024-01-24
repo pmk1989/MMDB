@@ -1,0 +1,28 @@
+
+.movie-details {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .movie-poster img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .movie-info {
+    flex-grow: 1;
+  }
+  
+  .release-date,
+  .release-status,
+  .runtime,
+  .rating,
+  .genres,
+  .language,
+  .budget,
+  .revenue,
+  .overview {
+    margin-bottom: 10px;
+  }
+  
